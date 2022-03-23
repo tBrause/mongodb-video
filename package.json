@@ -1,0 +1,8 @@
+{
+  "name": "mongodb",
+  "version": "0.0.1",
+  "description": "Video",
+  "main": "app.js",
+  "author": "Torsten Brause",
+  "license": "ISC"
+}
