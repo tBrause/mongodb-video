@@ -1,9 +1,11 @@
 {
-  "name": "mongodb",
+  "name": "mongodb-video",
   "version": "0.0.1",
   "description": "Video",
   "main": "app.js",
   "author": "Torsten Brause",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "mongodb": "4.4.1"
+  }
 }
