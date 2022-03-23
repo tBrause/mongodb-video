@@ -1,47 +1,53 @@
 const http = require("http");
 
 const mongodb = require("mongodb");
-/*
-const MongoClient = mongodb.MongoClient;
 
-const connection = "mongodb://root:secret@http://localhost:27017/admin";
+//const MongoClient = mongodb.MongoClient;
 
-MongoClient.connect(connection, { autoReconnect: true }, (err, database) => {
-  //
-  if (err) {
-    console.log(err.message);
-    process.exit(1);
-  }
-});
-*/
+// FUNZT
 
-/*
 const { MongoClient } = require("mongodb");
-const url = "localhost:27017";
+const url =
+  "mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false";
 const client = new MongoClient(url);
 
 // Database Name
-const dbName = "tutorial.products";
+const dbName = "tutorial";
 
 async function main() {
   // Use connect method to connect to the server
   await client.connect();
   console.log("Connected successfully to server");
   const db = client.db(dbName);
-  const collection = db.collection("documents");
+  const collection = db.collection("products");
+
+  //console.log(collection);
 
   // the following code examples can be pasted here...
+
+  collection.find().toArray((err, documents) => {
+    if (err) {
+      console.log(err.message + " gggg");
+      process.exit(1);
+    }
+
+    //console.log(documents);
+
+    documents.close();
+  });
 
   return "done.";
 }
 
-
 main()
-  .then(console.log)
+  .then(output())
   .catch(console.error)
   .finally(() => client.close());
 
-*/
+function output() {
+  // ...
+  console.log;
+}
 
 /*
 const server = http.createServer(function (req, res) {
