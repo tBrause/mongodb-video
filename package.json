@@ -4,5 +4,6 @@
   "description": "Video",
   "main": "app.js",
   "author": "Torsten Brause",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {}
 }
